@@ -1,0 +1,11 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% block content %}
+    {% comment %} enctype="multipart/form-data" {% endcomment %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            <button class="btn-primary btn" type="submit" id="submit-btn">Guardar</button>
+        </form>
+{% endblock %}
